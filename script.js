@@ -1,15 +1,19 @@
+var x=true;
 function myFunction(){
-
-    class Car{
-        constructor(name,year){
-            this.name=name;
-            this.year=year;
-        }
-    }
-    const Car1=new Car("Audi",2020);
-    const Car2=new Car("BMW",2011);
-
-    document.getElementById("ptag").innerHTML=Car1.name+" "+Car2.name;
+const myc=document.getElementsByTagName("p");
+var len=myc.length;
+for(var i=0;x && i<len;i++){
+    setInterval(function() { 
+        myc[i].innerHTML="red";
+},1000)
+myc[i].style.color="black";
+if(i>=len){
+    i=0;
+}
+}
+}
+function reset(){
+    x=false;
 }
 
 
